@@ -38,7 +38,7 @@ if len(selected_species) > 1:
     sns.pairplot(filtered_data, hue="species", palette="Set1")
       
 else:
-    st.write("Please select at least two species to generate a pair plot.")
+     sns.pairplot(data, hue="species")
 st.pyplot()
 st.subheader("Distribution of Selected Features")
 selected_feature = st.selectbox("Select a feature to display its distribution:", data.columns[:-1])
